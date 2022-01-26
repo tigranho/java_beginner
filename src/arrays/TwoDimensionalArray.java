@@ -37,9 +37,7 @@ public class TwoDimensionalArray {
                     if (i == j) {
                         System.out.println(a[i][j]);
                     }
-                    else {
-                        System.out.println(" Matrix should be square ");
-                    }
+
                 }
             }
         }

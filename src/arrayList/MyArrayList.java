@@ -1,4 +1,4 @@
-package arrayListImplList;
+package arrayList;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -7,8 +7,9 @@ import java.util.ListIterator;
 
 public class MyArrayList implements List {
 
-    Object [] array = new Object [10];
+    Object[] array = new Object[10];
     int size = 0;
+
     @Override
     public int size() {
         return size;
@@ -37,15 +38,15 @@ public class MyArrayList implements List {
     @Override
     public boolean add(Object o) {
         size++;
-        Object [] array1 = new Object[array.length+2];
-        if(array.length == size){
+        Object[] array1 = new Object[array.length + 2];
+        if (array.length == size) {
             for (int i = 0; i < array.length; i++) {
                 array1[i] = array[i];
             }
             array = array1;
         }
         for (int i = 0; i < array.length; i++) {
-            if(array[i] == null){
+            if (array[i] == null) {
                 array[i] = o;
 
                 return true;
@@ -58,7 +59,7 @@ public class MyArrayList implements List {
     @Override
     public boolean remove(Object o) {
         for (int i = 0; i < size; i++) {
-            if(o == array[i]){
+            if (o == array[i]) {
                 remove(i);
                 return true;
             }
@@ -84,9 +85,9 @@ public class MyArrayList implements List {
 
     @Override
     public Object get(int index) {
-    if(index> size){
-    throw new ArrayIndexOutOfBoundsException("This index is not allowed");
-}
+        if (index > size) {
+            throw new ArrayIndexOutOfBoundsException("This index is not allowed");
+        }
         return array[index];
     }
 
@@ -98,24 +99,24 @@ public class MyArrayList implements List {
     @Override
     public void add(int index, Object element) {
         get(index);
-       array[index] = element;
-       size++;
+        array[index] = element;
+        size++;
     }
 
     @Override
     public Object remove(int index) {
         get(index);
-        Object temp =array[index];
-        Object[]array2=new Object [array.length-1];
-        for (int i = 0; i < array2.length ; i++) {
-            if(i >= index){
-                array2[i] = array[i+1];
+        Object temp = array[index];
+        Object[] array2 = new Object[array.length - 1];
+        for (int i = 0; i < array2.length; i++) {
+            if (i >= index) {
+                array2[i] = array[i + 1];
 
-            }else if(i != index){
-                    array2[i] = array[i];
-                }
+            } else if (i != index) {
+                array2[i] = array[i];
             }
-        array=array2;
+        }
+        array = array2;
         size--;
         remove(temp);
         return index;

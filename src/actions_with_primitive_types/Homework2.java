@@ -130,7 +130,6 @@ public class Homework2 {
         System.out.println(ij);
         System.out.println(m);
 
-
     }
 }
 
