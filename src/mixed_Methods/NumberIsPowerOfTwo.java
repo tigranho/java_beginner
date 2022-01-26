@@ -4,57 +4,71 @@ public class NumberIsPowerOfTwo {
     public static void main(String[] args) {
         NumberIsPowerOfTwo num = new NumberIsPowerOfTwo();
         System.out.println(num.numberIsPowerOfTwo(789));
-        num.StringCastInt("i4g4j2");
+        num.StringCastInt("12346");
     }
 
+    /**
+     * If number is power of two return true, else return false.
+     *
+     * @param number - gets number as parameter
+     * @return boolean
+     */
     public boolean numberIsPowerOfTwo(int number) {
 
         return number % 2 == 0;
     }
 
+    /**
+     * Gets String, then cast it to int, if you give letter instead of number it will throw exception
+     *
+     * @param word - gets string as parameter
+     */
     public void StringCastInt(String word) {
-
+        int temp = 0;
+        int number = 0;
         for (int i = 0; i < word.length(); i++) {
 
-            char ch = word.charAt(i);
-            switch (ch) {
+            switch (word.charAt(i)) {
                 case '0':
-                    System.out.print(0);
+                    temp = 0;
                     break;
                 case '1':
-                    System.out.print(1);
+                    temp = 1;
                     break;
                 case '2':
-                    System.out.print(2);
+                    temp = 2;
                     break;
                 case '3':
-                    System.out.print(3);
+                    temp = 3;
                     break;
                 case '4':
-                    System.out.print(4);
+                    temp = 4;
                     break;
                 case '5':
-                    System.out.print(5);
+                    temp = 5;
                     break;
                 case '6':
-                    System.out.print(6);
+                    temp = 6;
                     break;
                 case '7':
-                    System.out.print(7);
+                    temp = 7;
                     break;
                 case '8':
-                    System.out.print(8);
+                    temp = 8;
                     break;
                 case '9':
-                    System.out.print(9);
+                    temp = 9;
                     break;
-                //  default:
-                //    System.out.print(" Number does no exist ");
 
+                default:
+                    throw new IllegalArgumentException("Not allowed to write letters");
             }
-
-
+            number += temp;
+            if (i != word.length() - 1) {
+                number *= 10;
+            }
         }
+        System.out.println(number);
     }
 }
 
