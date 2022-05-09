@@ -1,0 +1,52 @@
+.def-textarea {
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 200px;
+    min-height: 85px;
+    padding: 14px 12px;
+    font-size: 14px;
+    font-family: notoSansRegular, 'Noto Sans', sans-serif;
+    color: $black;
+    border: 0;
+    background-color: $white;
+    @include border-radius(3px 3px 0 0);
+    @include transition(0.3s);
+
+    &::-webkit-input-placeholder {
+      color: $grey-middle-light;
+    }
+    &::-moz-placeholder {
+      color: $grey-middle-light;
+    }
+    &:-moz-placeholder {
+      color: $grey-middle-light;
+    }
+    &:-ms-input-placeholder {
+      color: $grey-middle-light;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $grey;
+      @include border-radius(2px);
+    }
+  }
+
+  &.txt-outline {
+    textarea {
+      border: 1px solid $grey-lighter;
+    }
+  }
+}

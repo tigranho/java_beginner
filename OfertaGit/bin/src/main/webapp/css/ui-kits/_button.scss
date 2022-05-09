@@ -1,0 +1,77 @@
+.def-button {
+  border: 0;
+  height: 44px;
+  color: $white;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 0 12px;
+  width: 100%;
+  background-color: transparent;
+  font-family: notoSansRegular;
+  @include border-radius(3px);
+  @include transition(0.3s);
+
+  &.with-shadow {
+    @include box-shadow(0px 4px 4px rgba(84, 207, 26, 0.2));
+  }
+
+  &.btn-grey {
+    background-color: $grey;
+  }
+
+  &.btn-outline {
+    color: $blue-middle-dark;
+    border: 1px solid $grey-light;
+
+    &:hover {
+      border-color: $blue-middle-dark;
+      background-color: $blue-middle-dark;
+      color: $white;
+    }
+  }
+
+  &.btn-blue, &.btn-green {
+    color: $white;
+    background-color: $blue;
+
+    i {
+      color: $white !important;
+    }
+  }
+
+  &.btn-green {
+    background-color: $green;
+
+    &:hover {
+      background-color: $green-dark;
+    }
+  }
+
+  &.btn-blue {
+    &:hover {
+      background-color: $blue-middle-light;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a.def-button {
+  display: inline-block;
+  line-height: 44px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .def-button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 620px) {
+  .def-button {
+    font-size: 12px;
+  }
+}

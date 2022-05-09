@@ -1,0 +1,90 @@
+.def-input {
+  position: relative;
+
+  input {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    font-family: notoSansRegular, 'Noto Sans', sans-serif;
+    padding: 0 12px;
+    color: $black;
+    border: 0;
+    background-color: $white;
+    @include border-radius(3px 3px 0 0);
+    @include transition(0.3s);
+
+    &::-webkit-input-placeholder {
+      color: $grey-middle-dark;
+    }
+    &::-moz-placeholder {
+      color: $grey-middle-dark;
+    }
+    &:-moz-placeholder {
+      color: $grey-middle-dark;
+    }
+    &:-ms-input-placeholder {
+      color: $grey-middle-dark;
+    }
+  }
+
+  &.int-outline {
+    input {
+      border: 1px solid $grey-lighter;
+    }
+  }
+
+  &.int-right-icon,  &.int-left-icon {
+    i {
+      position: absolute;
+      top: 12px;
+      font-size: 20px;
+      color: rgba(36, 45, 54, 0.6);
+    }
+  }
+
+  &.int-left-icon {
+    input {
+      padding-left: 35px;
+    }
+
+    i {
+      left: 12px;
+    }
+  }
+
+  &.int-right-icon {
+    input {
+      padding-right: 35px;
+    }
+
+    i {
+      right: 12px;
+    }
+  }
+
+  &.int-dashed {
+    input {
+      padding: 0;
+      height: 35px;
+      background-color: transparent;
+      border-bottom: 1px dashed #dddddd;
+      @include border-radius(0);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .def-input {
+    input {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .def-input {
+    input {
+      font-size: 12px;
+    }
+  }
+}

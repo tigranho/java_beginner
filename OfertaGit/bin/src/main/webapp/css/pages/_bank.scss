@@ -1,0 +1,773 @@
+.banks-page {
+  .top-calculator {
+    height: 140px;
+  }
+
+  .banks-table {
+    border: 1px solid $grey-light;
+    @include border-radius(3px 3px 0 0);
+
+    .item-row {
+      color: $blue-middle-dark;
+      width: 100%;
+      background-color: $white;
+      border-bottom: 1px solid $grey-light;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .flex-item {
+        width: 36%;
+        padding: 14px 24px;
+
+        &:last-child {
+          width: 28%;
+          min-width: 230px;
+        }
+      }
+
+      &.head {
+        height: 40px;
+        color: $grey-middle-dark;
+
+        .flex-item {
+          padding: 10px 24px;
+          text-align: center;
+          border-right: 1px solid $grey-light;
+
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+
+      &:not(.head) {
+        &:hover {
+          cursor: pointer;
+          position: relative;
+          z-index: 2;
+          @include box-shadow(0px 4px 24px rgba(0, 0, 0, 0.06));
+        }
+      }
+    }
+
+    .item-img {
+      max-width: 100px;
+
+      img {
+        width: auto;
+      }
+    }
+
+    .item-info {
+      flex: 1;
+      padding-left: 16px;
+    }
+  }
+}
+
+.bank-header,  .rate-calculator {
+  .bg {
+    background: no-repeat bottom right;
+    background-size: 82%;
+  }
+}
+
+.bank-header {
+  padding-top: 40px;
+  margin-bottom: 30px;
+
+  .item-logo {
+    max-height: 75px;
+    margin: 40px 0 20px;
+
+    img  {
+      width: 80%;
+      max-width: 385px;
+    }
+  }
+
+  .card-img {
+    width: 100%;
+    padding-top: 65%;
+    background: no-repeat center;
+    background-size: cover;
+    @include border-radius(4px);
+  }
+}
+
+.bank-item-page {
+  .loan-types {
+    margin-top: 0px;
+
+    .item {
+      flex: 1;
+      border: 1px solid $grey-light;
+      border-right-width: 0;
+      margin-top: 0;
+      min-height: 138px;
+      height: auto;
+      @include transition(0.3s);
+      @include border-radius(0);
+
+      &:last-child {
+        border-right-width: 1px;
+      }
+
+      a {
+        padding-top: 24px;
+        display: block;
+
+        >span {
+          display: block;
+          text-align: center;
+
+          &.icon {
+           margin: 0 auto 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-bank {
+  padding-top: 60px;
+
+  .item-desc {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 24px;
+  }
+}
+
+.bank-info {
+  >div {
+    margin-top: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.bank-branches {
+  .right-part {
+    >a {
+      width: initial;
+      margin-left: 12px;
+    }
+  }
+
+  .map {
+    margin-top: 35px;
+
+    iframe {
+      width: 100%;
+      height: 385px;
+    }
+  }
+}
+
+.credit-info {
+  margin-top: 50px;
+
+  .item {
+    margin-top: 14px;
+
+    >span {
+      flex: 1;
+
+      &:first-child {
+        max-width: 200px;
+      }
+
+      &:last-child {
+        padding: 0 10px;
+        font-weight: bold;
+      }
+
+      img {
+        margin-left: 8px;
+        width: 14px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.total-info {
+  padding: 28px 20px;
+  margin-top: 40px;
+  border: 1px solid $grey-lighter;
+  @include border-radius(3px);
+
+  .flex {
+    >div {
+      flex: 1;
+      padding: 0 8px;
+
+      p {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.deposit-progress-bar {
+  .progress-line {
+    height: 44px;
+    width: 100%;
+    max-width: 394px;
+    margin-bottom: 18px;
+  }
+
+  span {
+    &:first-child {
+      border-top-left-radius: 3px;
+    }
+    &:last-child {
+      border-top-right-radius: 3px;
+    }
+    &.bg-green-light {
+      background: $green-light;
+    }
+    &.bg-blue {
+      background: $blue !important;
+    }
+    &.bg-green {
+      background: $green;
+    }
+  }
+
+  .cube {
+    width: 16px;
+    height: 16px;
+    @include border-radius(2px);
+  }
+
+  li {
+    margin-bottom: 15px;
+
+    span:last-child {
+      padding-left: 12px;
+    }
+  }
+}
+
+.rate-page {
+  .scroll {
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+      margin-left: 160px;
+    }
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+  }
+
+  .custom-label {
+    padding-left: 24px;
+  }
+}
+
+.rate-table {
+  >div {
+    min-height: initial;
+  }
+  .flex-item {
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid $white-middle-dark;
+    display: flex;
+    min-height: 68px;
+    padding: 0px;
+    white-space: nowrap;
+    @include align-items(center);
+
+    >span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.banks-name {
+      >span {
+        display: initial;
+        vertical-align: middle;
+
+        &.item-img {
+          width: 40px;
+
+          img {
+            max-width: 100%;
+          }
+        }
+
+        &:last-child {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      @include justify-content(center);
+    }
+
+    &:first-child {
+      padding-left: 24px;
+      padding-right: 10px;
+      width: 40%;
+      min-width: 150px;
+    }
+
+    .flex-part {
+      flex: 1;
+      border-right: 1px solid $white-middle-dark;
+
+      &:last-child {
+        border-right-width: 0;
+      }
+    }
+  }
+  .flex-top {
+    flex: 100%;
+    font-weight: bold;
+    color: $blue;
+    font-family: notoSansRegular, 'Noto Sans', sans-serif;
+    border-bottom: 1px solid $white-middle-dark;
+  }
+
+  .flex-row {
+    &:not(.head) {
+      .flex-part {
+        min-height: 68px;
+        display: flex;
+        @include align-items(center);
+        @include justify-content(center);
+      }
+    }
+    &.head {
+      .flex-item {
+        font-family: notoSansMedium, 'Noto Sans', sans-serif;
+      }
+
+      .flex-top, .flex-part {
+        height: 50%;
+        display: flex;
+        @include align-items(center);
+        @include justify-content(center);
+      }
+    }
+  }
+
+  .flex-cell {
+    height: 100%;
+    padding: 0;
+  }
+}
+
+.rate-calculator-form {
+  width: 60%;
+
+  .small {
+    .def-select-box {
+      margin-top: 29px;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .rate-calculator-form {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .banks-page, .usefull-link-item-page {
+    .left-side {
+      width: 100%;
+    }
+  }
+
+  .bank-header, .rate-calculator {
+    .bg {
+      background-size: 100%;
+    }
+  }
+
+  .credit-info {
+    .item {
+      width: 50%;
+    }
+  }
+
+  .rate-table {
+    font-size: 12px;
+  }
+
+  .rate-calculator-form {
+    width: 80%;
+  }
+
+  .banks-table {
+    .flex-item {
+      padding: 10px;
+    }
+  }
+
+  .bank-item-page {
+    .loan-types {
+      > div {
+        border-top: 1px solid $grey-light;
+        border-left: 1px solid $grey-light;
+      }
+
+      .item {
+        border: 1px solid $grey-light;
+        border-top: 0;
+        border-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 621px){
+  .bank-item-page {
+    .loan-types {
+      .item {
+        flex: initial;
+        width: 33.3333%;
+        min-height: 60px;
+
+        a {
+          display: flex;
+          @include align-items(center);
+
+
+          >span {
+            text-align: left;
+
+            &.icon {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banks-page {
+    .top-calculator {
+      .small {
+        width: 20%;
+      }
+
+      .large {
+        width: 30%;
+      }
+    }
+
+    .banks-table {
+      border: 0;
+
+      .item-row {
+        @include flex-wrap(wrap);
+        margin-bottom:  10px;
+        border: 1px solid $grey-light !important;
+
+        &.head {
+          display: none !important;
+        }
+
+        .flex-item {
+          flex: 100%;
+
+          &:not(:last-child) {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      .item-img, .item-info {
+        width: 50%;
+        max-width: initial;
+      }
+    }
+  }
+
+  .see-all {
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .bank-header, .rate-calculator {
+    .bg {
+      background-size: 130%;
+    }
+  }
+
+  .total-info {
+    padding: 15px;
+  }
+
+  .credit-info {
+    width: 100% !important;
+  }
+
+  .rate-table {
+    background: $white;
+    min-width: 750px;
+
+    .head {
+      height: 60px !important;
+    }
+
+    .flex-row {
+      min-height: 50px;
+
+      &:not(.head) {
+        .flex-part {
+          min-height: 50px;
+        }
+      }
+    }
+
+    div {
+      background: inherit;
+    }
+
+    .flex-item {
+      min-height: 50px;
+
+      &:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 101;
+        min-width: auto;
+        max-width: 100px;
+      }
+
+      &.banks-name {
+        >span {
+          &.item-img {
+            width: 100%;
+
+            img {
+              max-width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rate-page {
+    .scroll {
+      &::-webkit-scrollbar-track {
+        margin-left: 100px;
+      }
+    }
+  }
+
+  .rate-calculator-form {
+    width: 100%;
+
+
+    .small {
+      .def-select-box {
+        margin-top: 28px;
+      }
+    }
+  }
+
+  .bank-info {
+    >div {
+     width: 50% !important;
+    }
+  }
+
+
+  .about-bank {
+    padding-top: 40px;
+
+    .item-desc {
+      font-size: 14px;
+      margin-top: 18px;
+    }
+  }
+
+  .bank-branches {
+    >div.flex {
+      @include flex-wrap(warp);
+    }
+    .right-part {
+      flex: 100%;
+      text-align: right;
+      margin-bottom: 20px;
+      order: 0;
+    }
+
+    .title {
+      order: 1;
+    }
+
+    .map {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .banks-page {
+    .top-calculator {
+      height: auto;
+
+      .col {
+        max-width: initial;
+      }
+    }
+
+    .banks-table {
+      .item-img, .item-info {
+        width: 100%;
+      }
+
+      .item-img {
+        margin-bottom: 20px;
+        img {
+          width: initial;
+        }
+      }
+
+      .item-info {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .bank-header, .rate-calculator {
+    .bg {
+      background-size: 180%;
+    }
+
+    .top {
+      .col {
+        width: 35%;
+      }
+    }
+  }
+
+  .credit-info {
+    margin-top: 25px;
+
+    .item {
+      width: 100%;
+      margin-top: 10px;
+
+      >span {
+        &:last-child {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
+  .rate-table {
+    font-size: 10px;
+
+    .flex-item {
+      &:first-child {
+        max-width: 70px;
+        padding-left: 12px;
+      }
+    }
+  }
+
+  .rate-page {
+    .scroll {
+      &::-webkit-scrollbar-track {
+        margin-left: 70px;
+      }
+    }
+
+    .custom-label {
+      padding-left: 12px;
+    }
+  }
+
+  .rate-calculator-form {
+   .col {
+     width: 100%;
+     margin-bottom: 16px;
+
+     &:last-child {
+       margin-bottom: 0;
+     }
+   }
+
+    .small {
+      .def-select-box {
+        margin-top: 27px;
+      }
+    }
+  }
+
+  .bank-item-page {
+    .loan-types {
+      .item {
+        flex: initial;
+        width: 50%;
+        text-align: left !important;
+        margin-top: 0;
+        min-height: auto;
+        padding: 0 !important;
+
+        a {
+          >span {
+            text-align: left !important;
+
+            &.icon {
+              margin: initial;
+              margin-bottom: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .bank-info {
+    >div {
+      width: 100% !important;
+    }
+  }
+
+  .bank-branches {
+    .right-part {
+      display: flex;
+
+     >a {
+       width: 50%;
+       margin-left: 5px;
+
+       &:first-child {
+         margin-left: initial;
+         margin-right: 5px;
+       }
+     }
+    }
+  }
+}

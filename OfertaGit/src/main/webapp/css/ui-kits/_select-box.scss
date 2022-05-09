@@ -1,0 +1,76 @@
+.def-select-box {
+  position: relative;
+
+  &:before {
+    content: '\e905';
+    position: absolute;
+    font-family: icomoon;
+    top: 18px;
+    font-size: 10px;
+    right: 12px;
+    color: rgba(36, 45, 54, 0.6);
+    pointer-events:none;
+  }
+
+  &.opened {
+    &:before {
+      content: '\e904';
+    }
+  }
+
+  select {
+    width: 100%;
+    color: $black;
+    padding: 0px 30px 0 15px;
+    height: 44px;
+    font-size: 14px;
+    border: 0;
+    cursor: pointer;
+    background-color: $white;
+    font-family: notoSansRegular, 'Noto Sans', sans-serif;
+    @include appearance(none);
+    @include border-radius(3px 3px 0 0);
+  }
+
+  option {
+    color: $blue-dark;
+    font-size: 14px;
+  }
+
+  &.select-dashed {
+    &:before {
+      right: 0;
+    }
+
+    select {
+      padding: 0;
+      height: 35px;
+      background-color: transparent;
+      border-bottom: 1px dashed #dddddd;
+      @include border-radius(0);
+    }
+  }
+
+  &.st-outline {
+    select {
+      border: 1px solid $grey-lighter;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .def-select-box {
+    select, option {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .def-select-box {
+    select, option {
+      font-size: 12px;
+    }
+  }
+}

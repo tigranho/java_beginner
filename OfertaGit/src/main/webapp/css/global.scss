@@ -1,0 +1,35 @@
+//****helpers******//
+@import 'helpers/fonts';
+@import 'helpers/colors';
+@import 'helpers/mixins';
+@import 'helpers/helpers';
+@import 'helpers/grid';
+@import 'helpers/main';
+
+//****ui-kits******//
+@import 'ui-kits/table';
+@import 'ui-kits/rating';
+@import 'ui-kits/input';
+@import 'ui-kits/range';
+@import 'ui-kits/button';
+@import 'ui-kits/radio';
+@import 'ui-kits/checkbox';
+@import 'ui-kits/textarea';
+@import 'ui-kits/select-box';
+@import 'ui-kits/datepicker';
+@import 'ui-kits/header';
+@import 'ui-kits/navigation';
+@import 'ui-kits/footer';
+@import 'ui-kits/tabs';
+@import 'ui-kits/switch';
+@import 'ui-kits/tooltip';
+@import 'ui-kits/carousel';
+@import 'ui-kits/top-calculator';
+@import 'ui-kits/modal';
+
+//****ui-kits******//
+@import 'pages/home';
+@import 'pages/loan';
+@import 'pages/all';
+@import 'pages/bank';
+

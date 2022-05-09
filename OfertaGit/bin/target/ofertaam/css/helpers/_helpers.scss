@@ -1,0 +1,490 @@
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.text-transform-none {
+    text-transform: none;
+}
+.underline {
+    text-decoration: underline;
+}
+/*float*/
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+/*cursor*/
+.pointer {
+    cursor: pointer;
+}
+
+/*clear*/
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/*display*/
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+.inline-block {
+    display: inline-block;
+}
+.flex {
+    display: -webkit-flex !important;
+    display: -ms-flex !important;
+    display: flex !important;
+}
+
+.justify-center {
+   @include justify-content(center);
+}
+.space-between {
+   @include justify-content(space-between);
+}
+
+.align-items-center {
+   @include align-items(center);
+}
+/*alignement*/
+
+.align-middle {
+    vertical-align: middle;
+}
+.align-top {
+    vertical-align: top;
+}
+.align-bottom {
+    vertical-align: bottom;
+}
+
+.relative {
+    position: relative;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+
+/*colors*/
+
+.green {
+    color: $green !important;
+}
+.green-dark {
+    color: $green-dark !important;
+}
+.blue {
+    color: $blue !important;
+}
+.blue-dark {
+    color: $blue-dark !important;
+}
+.red {
+    color: $red !important;
+}
+.grey {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.bg-white-dark {
+    background-color: $white-middle-dark;
+}
+/**/
+
+.flex-wrap {
+    @include flex-wrap(wrap);
+}
+
+.flex-wrap-reverse {
+    @include flex-wrap(wrap-reverse);
+}
+
+.align-items-center {
+    @include align-items(center);
+}
+
+.align-items-stretch {
+    @include align-items(stretch);
+}
+
+/*text-manipulation*/
+.bold {
+    font-weight: bold;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+
+.padding-bt-60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+/* Width with persents */
+@mixin width-percent($value){
+    width: #{$value + '%'} ;
+}
+
+@for $i from 0 through 100 {
+    .width-percent-#{$i}{
+        @include width-percent($i);
+    }
+}
+
+/* Font classes */
+
+@mixin font($value) {
+    font-size: #{$value + px} !important;
+}
+
+$font-list: 0 6 9 12 14 16 18 20 24 28 30 32 36 100;
+
+@each $i in $font-list {
+    .font-#{$i}{
+        @include font($i);
+    }
+}
+
+@mixin line-height($value) {
+    line-height: #{$value + px} !important;
+}
+
+$line-height: 0 20 24 36 44;
+
+@each $i in $line-height {
+    .line-height-#{$i}{
+        @include line-height($i);
+    }
+}
+
+/* Generate classes for margin */
+
+@mixin margin-right($value) {
+    margin-right: #{$value + px} !important;
+}
+
+$margin-right-list: 0 5 10 15 20 25 30 40;
+
+@each $i in $margin-right-list {
+    .margin-right-#{$i}{
+        @include margin-right($i);
+    }
+}
+
+@mixin margin-left($value) {
+    margin-left: #{$value + px} !important;
+}
+
+$margin-left-list: 0 5 10 15 20 25 30 40 ;
+
+@each $i in $margin-left-list {
+    .margin-left-#{$i}{
+        @include margin-left($i);
+    }
+}
+
+@mixin margin-top($value) {
+    margin-top: #{$value + px} !important;
+}
+
+$margin-top-list: 0 5 10 15 20 25 30 40 60 80 100;
+
+@each $i in $margin-top-list {
+    .margin-top-#{$i}{
+        @include margin-top($i);
+    }
+}
+
+@mixin margin-bottom($value) {
+    margin-bottom: #{$value + px} !important;
+}
+
+$margin-bottom-list: 0 5 10 15 20 25 30 35 40 60;
+
+@each $i in $margin-bottom-list {
+    .margin-bottom-#{$i}{
+        @include margin-bottom($i);
+    }
+}
+
+/* Generate classes for padding */
+@mixin padding-right($value) {
+    padding-right: #{$value + px} !important;
+}
+
+$padding-right-list: 0 5 10 15 20 25 30 40;
+
+@each $i in $padding-right-list {
+    .padding-right-#{$i}{
+        @include padding-right($i);
+    }
+}
+
+@mixin padding-left($value) {
+    padding-left: #{$value + px} !important;
+}
+
+$padding-left-list: 0 10 15 24 110;
+
+@each $i in $padding-left-list {
+    .padding-left-#{$i}{
+        @include padding-left($i);
+    }
+}
+
+@mixin padding-top($value) {
+    padding-top: #{$value + px} !important;
+}
+
+$padding-top-list: 0 5 7 10 15 30 50;
+
+@each $i in $padding-top-list {
+    .padding-top-#{$i}{
+        @include padding-top($i);
+    }
+}
+
+@mixin padding-bottom($value) {
+    padding-bottom: #{$value + px} !important;
+}
+
+$padding-bottom-list: 0 50 60;
+
+@each $i in $padding-bottom-list {
+    .padding-bottom-#{$i}{
+        @include padding-bottom($i);
+    }
+}
+
+
+/* Max-Width with pixels */
+
+@mixin max-width($value){
+    max-width: #{$value + px};
+}
+
+$max-width-list: 0 110 160 240;
+
+@each $i in $max-width-list {
+    .max-width-#{$i}{
+        @include max-width($i);
+    }
+}
+
+/* Min-Width with pixels */
+@mixin min-width($value){
+    min-width: #{$value + px};
+}
+
+$min-width-list: 0;
+
+@each $i in $min-width-list {
+    .min-width-#{$i}{
+        @include min-width($i);
+    }
+}
+
+
+@media (max-width: 1120px) {
+    @for $i from 20 through 36 {
+        .font-#{$i} {
+            @include font($i - 2);
+        }
+    }
+    @for $i from 14 through 19 {
+        .font-#{$i} {
+            @include font($i - 1);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    @for $i from 34 through 36 {
+        .font-#{$i} {
+            @include font($i - 8);
+        }
+    }
+    @for $i from 20 through 36 {
+        .font-#{$i} {
+            @include font($i - 3);
+        }
+    }
+    @for $i from 16 through 19 {
+        .font-#{$i} {
+            @include font($i - 2);
+        }
+    }
+
+    @for $i from 30 through 44 {
+        .line-height-#{$i} {
+            @include line-height($i - 4);
+        }
+    }
+
+    @for $i from 80 through 110 {
+        .margin-bottom-#{$i} {
+            @include margin-bottom($i - 30);
+        }
+        .margin-top-#{$i} {
+            @include margin-top($i - 30);
+        }
+        .padding-bottom-#{$i} {
+            @include padding-bottom($i - 30);
+        }
+        .padding-top-#{$i} {
+            @include padding-top($i - 30);
+        }
+    }
+    @for $i from 50 through 70 {
+        .margin-bottom-#{$i} {
+            @include margin-bottom($i - 20);
+        }
+        .margin-top-#{$i} {
+            @include margin-top($i - 20);
+        }
+        .padding-bottom-#{$i} {
+            @include padding-bottom($i - 20);
+        }
+        .padding-top-#{$i} {
+            @include padding-top($i - 20);
+        }
+    }
+
+
+    .padding-bt-60 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    @for $i from 34 through 36 {
+        .font-#{$i} {
+            @include font($i - 8);
+        }
+    }
+    @for $i from 24 through 32 {
+        .font-#{$i} {
+            @include font($i - 4);
+        }
+    }
+    @for $i from 16 through 19 {
+        .font-#{$i} {
+            @include font($i - 3);
+        }
+    }
+    @for $i from 30 through 44 {
+        .line-height-#{$i} {
+            @include line-height($i - 6);
+        }
+    }
+    @for $i from 80 through 110 {
+        .margin-bottom-#{$i} {
+            @include margin-bottom($i - 40);
+        }
+        .margin-top-#{$i} {
+            @include margin-top($i - 40);
+        }
+        .padding-bottom-#{$i} {
+            @include padding-bottom($i - 40);
+        }
+        .padding-top-#{$i} {
+            @include padding-top($i - 40);
+        }
+    }
+    @for $i from 50 through 70 {
+        .margin-bottom-#{$i} {
+            @include margin-bottom($i - 30);
+        }
+        .margin-top-#{$i} {
+            @include margin-top($i - 30);
+        }
+        .padding-bottom-#{$i} {
+            @include padding-bottom($i - 30);
+        }
+        .padding-top-#{$i} {
+            @include padding-top($i - 30);
+        }
+    }
+
+    .padding-bt-60 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 620px) {
+    @for $i from 34 through 36 {
+        .font-#{$i} {
+            @include font($i - 12);
+        }
+    }
+    @for $i from 24 through 32 {
+        .font-#{$i} {
+            @include font($i - 6);
+        }
+    }
+    @for $i from 30 through 44 {
+        .line-height-#{$i} {
+            @include line-height($i - 8);
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    @for $i from 34 through 36 {
+        .font-#{$i} {
+            @include font($i - 16);
+        }
+    }
+    @for $i from 28 through 32 {
+        .font-#{$i} {
+            @include font($i - 10);
+        }
+    }
+
+    @for $i from 35 through 45 {
+        .margin-bottom-#{$i} {
+            @include margin-bottom($i - 10);
+        }
+        .margin-top-#{$i} {
+            @include margin-top($i - 10);
+        }
+        .padding-bottom-#{$i} {
+            @include padding-bottom($i - 10);
+        }
+        .padding-top-#{$i} {
+            @include padding-top($i - 10);
+        }
+    }
+}

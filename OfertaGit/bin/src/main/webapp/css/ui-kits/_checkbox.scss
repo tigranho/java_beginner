@@ -1,0 +1,143 @@
+.def-checkbox {
+  cursor: pointer;
+  font-size: 0;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+
+    &.item-text {
+      font-size: 14px;
+      max-width: 75%;
+      max-width: calc(100% - 30px);
+      max-width: -webkit-calc(100% - 30px);
+      max-width: -moz-calc(100% - 30px);
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + span {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: $white;
+    border: 1px solid $grey-lighter;
+    @include border-radius(2px);
+
+    i {
+      color: $green;
+      opacity: 0;
+      margin-left: 1px;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 16px;
+      font-size: 10px;
+      @include transition(opacity 0.3s);
+    }
+  }
+
+  input[type="checkbox"]:checked + span {
+    border-color: $green;
+
+    i {
+      opacity: 1;
+    }
+  }
+
+  &.white-checkbox {
+    input[type="checkbox"] + span {
+      border-color: $white;
+
+      i {
+        color: $white;
+      }
+    }
+
+    input[type="checkbox"]:checked + span {
+      border-color: $white;
+    }
+  }
+
+  &.custom-checkbox {
+    display: inline-block;
+
+    input[type="checkbox"] + span {
+      height: 44px;
+      width: initial;
+      padding: 0 18px;
+      font-size: 14px;
+      text-align: center;
+      color: $black;
+      border: 0;
+      margin-right: 0px;
+      line-height: 44px;
+      background-color: $white;
+      background-clip: initial;
+      @include border-radius(3px);
+      @include transition(0.3s);
+
+      i {
+        line-height: 44px;
+        color: $black;
+        font-size: 16px;
+        opacity: 1 !important;
+        @include transition(0.3s);
+      }
+    }
+
+    input[type="checkbox"]:checked + span {
+      color: $white;
+      background-color: $green;
+
+      i {
+        color: $white;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .def-checkbox {
+    &.custom-checkbox {
+      input[type="checkbox"] + span {
+        padding: 0 14px;
+        font-size: 13px;
+
+        i {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .def-checkbox {
+    span {
+      &.item-text {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .def-checkbox {
+    span {
+      &.item-text {
+        font-size: 12px;
+      }
+    }
+
+    &.custom-checkbox {
+      input[type="checkbox"] + span {
+        font-size: 12px;
+      }
+    }
+  }
+}

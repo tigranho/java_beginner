@@ -1,0 +1,20 @@
+.rating {
+  font-size: 0;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    margin-right: 4px;
+    color: $grey-middle-light;
+
+    &.active {
+      color: $yellow;
+    }
+  }
+
+  &.large {
+    span {
+      font-size: 20px;
+    }
+  }
+}

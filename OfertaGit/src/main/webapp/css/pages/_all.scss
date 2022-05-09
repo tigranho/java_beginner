@@ -1,0 +1,420 @@
+.social-box {
+  font-size: 0;
+
+  li {
+    margin-right: 12px;
+    line-height: 0;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      font-size: 24px;
+      text-align: center;
+      line-height: 1;
+      color: $grey-middle-light;
+      @include transition(0.3s);
+
+      &:hover {
+        &.facebook {
+          color: #29487D;
+        }
+        &.telegram {
+          color: $blue;
+        }
+        &.linkedin {
+          color: #3075F3;
+        }
+      }
+    }
+  }
+}
+
+.usefull-links-page {
+  .faq-item {
+    .item-img {
+      padding-top: 61%;
+    }
+  }
+}
+
+.usefull-link-item-page {
+  color: $blue-dark;
+
+  .back-link {
+    margin-bottom: 30px;
+  }
+
+  .date {
+    margin-bottom: 6px;
+    color: rgba(0, 34, 69, 0.3);
+  }
+
+  .left-side {
+    .text-box {
+      width: 95%;
+      line-height: inherit;
+
+      p {
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .top {
+    .social-box {
+      min-width: 150px;
+      text-align: right;
+    }
+  }
+}
+
+.share-box {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+}
+
+.card-types-top {
+  margin-bottom: 30px;
+
+  .first {
+    margin-right: 16px;
+
+    label {
+      margin-right: 6px;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .last {
+    label {
+      margin-right: 14px;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.cards-container {
+  .card-item-row {
+    padding-top: 24px;
+    background-color: $white;
+    margin-bottom: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    @include border-radius(3px);
+
+    .item-title {
+      padding: 0 24px;
+    }
+
+    >div.flex {
+      >div {
+        flex: 1;
+        padding: 24px;
+
+        &:first-child {
+          padding-right: 0;
+        }
+
+        &:last-child {
+          max-width: 200px;
+          text-align: center;
+        }
+      }
+    }
+
+    .item-img {
+      background: no-repeat center;
+      background-size: cover;
+      padding-top: 64%;
+    }
+
+    .item-info {
+      border-right: 1px solid $white-middle-dark;
+
+      li {
+        margin: 10px 0;
+        display: flex;
+        @include align-items(center);
+
+        >span {
+          &:first-child {
+            padding-right: 10px;
+            width: 60%;
+          }
+
+          &:last-child {
+            width: 40%;
+          }
+        }
+      }
+    }
+    .item-desc {
+      p {
+        margin-bottom: 12px;
+        line-height: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.about-us-page {
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+
+.not-found {
+  color: $white;
+  text-align: center;
+  position: relative;
+  padding-top: 43%;
+
+  .bg {
+    padding-top: 20%;
+    background-size: contain;
+  }
+
+  .inner-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 100%;
+    max-width: initial;
+    @include transform(translateY(-50%));
+  }
+
+  .content {
+    width: 80%;
+    margin: auto;
+    max-width: 500px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.credit-form {
+  .left-side {
+    border-right: 1px solid $grey-lighter;
+    min-width: 380px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .credit-form {
+    .right-side {
+      .col {
+        width: 100%;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .not-found {
+    padding-top: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .cards-container {
+    .card-item-row {
+
+      .col {
+        flex: initial !important;
+        width: 60%;
+
+        &:first-child {
+          width: 40%;
+        }
+      }
+
+      .item-info {
+        border-right: 0;
+      }
+    }
+  }
+
+  .card-types-top {
+    .first {
+      margin-right: 10px;
+    }
+
+    .last {
+      label {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .contact-form {
+    .bank-info {
+      padding-left: 30px;
+    }
+  }
+
+
+  .not-found {
+    padding-top: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    .card-item-row {
+      .col {
+        flex: initial !important;
+        width: 50% !important;
+        max-width: initial !important;
+      }
+    }
+  }
+
+  .card-types-top {
+   >div {
+     flex: 100%;
+     margin-bottom: 10px;
+
+     &:last-child {
+       margin-bottom: 0;
+     }
+   }
+  }
+
+  .faq-main-row {
+    >div {
+      width: 50%;
+    }
+  }
+
+  .contact-form {
+    >div {
+      >div {
+        width: 100%;
+      }
+    }
+    .bank-info {
+      margin-top: 30px;
+      padding-left: 0px;
+    }
+  }
+
+  .credit-form {
+    .left-side, .right-side {
+      width: 50%;
+      min-width: initial;
+    }
+
+    .form-row {
+      >div {
+        width: 100%;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .cards-container {
+    .card-item-row {
+      padding-bottom: 10px;
+
+      .col {
+        width: 100% !important;
+        padding: 5px 24px !important;
+
+        &:first-child {
+          margin-top: 10px;
+          max-width: 372px !important;
+        }
+      }
+    }
+  }
+
+  .about-us-page {
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  .credit-form {
+    >.flex {
+      @include flex-wrap(wrap);
+    }
+
+    .left-side, .right-side {
+      width: 100%;
+    }
+
+    .left-side {
+      margin-bottom: 30px;
+    }
+
+    .button-row {
+      text-align: center;
+    }
+
+    .total-info  {
+      margin-top: 20px;
+    }
+  }
+
+
+  .not-found {
+    padding-top: 100%;
+  }
+}
+
+@media (max-width: 414px) {
+  .downloads-row, .faq-main-row {
+    >div {
+      width: 100%;
+    }
+  }
+
+  .contact-form {
+    .form-row {
+      >div {
+        width: 100%;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
