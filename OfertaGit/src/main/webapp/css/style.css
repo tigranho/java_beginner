@@ -1,0 +1,51 @@
+.rangeslider--horizontal {
+	height: 5px;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.rangeslider__fill {
+	position: absolute;
+    z-index: 2;
+    display: block;
+    border: 0;
+    top: 3px;
+    height: 3px;
+    background-color: #54CF1A;
+    left: 0;
+}
+
+.search-results{
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+}
+.search-results span{
+   display: block;
+    padding: 3px 0;
+    cursor: pointer;
+}
+
+.rangeslider__handle {
+	top: -3px;
+    margin-left: -7px;
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    -ms-touch-action: none;
+    touch-action: none;
+    background-color: #54CF1A;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+#ui-id-1 {
+    z-index: 1000;
+}

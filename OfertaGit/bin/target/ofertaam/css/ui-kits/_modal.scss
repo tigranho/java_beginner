@@ -1,0 +1,158 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.3);
+  @include animation(fadeIn, 0.4s);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  color: $blue-dark;
+  background-color: $white;
+  width: 90%;
+  padding: 18px;
+  max-width: 942px;
+  max-height: 81vh;
+  @include border-radius(3px);
+  @include animation(slideIn, 0.4s);
+  @include transform(translateY(-50%));
+  @include box-shadow(0px 4px 24px rgba(0, 0, 0, 0.15));
+}
+
+.modal-header {
+  position: relative;
+  padding-right: 40px;
+
+  .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+}
+
+.modal-body {
+  &.scroll {
+    margin-right: 0;
+    padding-right: 0;
+    max-height: calc(81vh - 126px);
+    max-height: -webkit-calc(81vh - 126px);
+    max-height: -moz-calc(81vh - 126px);
+
+    &::-webkit-scrollbar-track {
+      background-color: #EEEEF0;
+      margin-top: 50px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #DEDEE1;
+    }
+  }
+}
+
+.modal-footer {
+  padding: 16px;
+
+  >span {
+    margin-left: 16px;
+    float: right;
+    min-width: 28%;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {top: -100%; opacity: 0}
+  to {top: 50%; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {top:  -100%; opacity: 0}
+  to {top: 50%; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+
+@media (max-width: 992px) {
+  .modal-body {
+    &.scroll {
+      max-height: calc(81vh - 125px);
+      max-height: -webkit-calc(81vh - 125px);
+      max-height: -moz-calc(81vh - 125px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    top: 0;
+    width: 100%;
+    max-width: initial;
+    max-height: initial;
+    height: 100vh;
+    @include transform(none);
+    @include border-radius(0px);
+    @include animation(fadeIn, 0.4s);
+  }
+
+  .modal-body {
+    &.scroll {
+      max-height: calc(100vh - 58px);
+      max-height: -webkit-calc(100vh - 58px);
+      max-height: -moz-calc(100vh - 58px);
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .modal-payment-graphic {
+    .modal-header {
+      padding-right: 0;
+
+      >div {
+        flex: 100%;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .modal-body {
+    &.scroll {
+      overflow: auto;
+      max-height: calc(100vh - 96px);
+      max-height: -webkit-calc(100vh - 96px);
+      max-height: -moz-calc(100vh - 96px);
+    }
+  }
+}

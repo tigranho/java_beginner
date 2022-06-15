@@ -1,0 +1,53 @@
+.owl-carousel {
+  .owl-nav {
+    position: absolute;
+    right: 0;
+    top: -55px;
+
+    >div {
+      display: inline-block;
+      vertical-align: middle;
+      border: 1px solid $grey-light;
+      font-size: 0;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      @include border-radius(3px);
+      @include transition(0.3s);
+
+      &:after {
+        content: '\e902';
+        font-family: icomoon;
+        font-size: 9px;
+        color: $blue-middle-dark;
+        @include transition(0.3s);
+      }
+
+      &:hover {
+        background-color: $green;
+        border-color: $green;
+
+        &:after {
+          color: $white;
+        }
+      }
+    }
+
+    .owl-next {
+      margin-left: 8px;
+
+      &:after {
+        content: '\e903';
+      }
+    }
+  }
+}
+
+.partners-container {
+  .owl-carousel {
+    .owl-stage-outer {
+      padding: 20px 0;
+    }
+  }
+}

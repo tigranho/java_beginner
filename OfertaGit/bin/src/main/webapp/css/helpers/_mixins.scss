@@ -1,0 +1,70 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+@mixin box-shadow($value...) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin animation($name, $value) {
+  -webkit-animation-name: $name;
+  -webkit-animation-duration: $value;
+  animation-name: $name;
+  animation-duration: $value;
+}
+
+@mixin transform($value) {
+  -ms-transform: $value;
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: ($args);
+  -ms-transition: ($args);
+  -moz-transition: ($args);
+  transition: ($args);
+}
+
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+
+@mixin align-self($value) {
+  -webkit-align-self: $value;
+  align-self: $value;
+}
+
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin flex-wrap($value) {
+  -webkit-flex-wrap: $value;
+  flex-wrap: $value;
+}
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+@mixin linear-gradient($args...) {
+  background-image: -o-linear-gradient($args);
+  background-image: -moz-linear-gradient($args);
+  background-image: -webkit-linear-gradient($args);
+  background-image: linear-gradient($args);
+}

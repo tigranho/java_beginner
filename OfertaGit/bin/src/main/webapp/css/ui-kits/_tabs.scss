@@ -1,0 +1,86 @@
+.tab-container {
+  .tab-nav {
+    height: 56px;
+    overflow: hidden;
+    background-color: $blue;
+    @include border-radius(2px);
+  }
+
+  .tab-link {
+    position: relative;
+    padding: 0px 20px;
+    color: $white;
+    height: 100%;
+    line-height: 56px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    @include transition(0.3s);
+
+    &:last-child {
+      border-right-width: 0;
+    }
+
+    &:hover, &.active  {
+      cursor: pointer;
+      background-color: $green;
+    }
+  }
+
+  .tab-content {
+    padding-top: 30px;
+    display: none;
+    @include animation(fadeEffect, 1s);
+  }
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media (max-width: 992px) {
+  .tab-container {
+    .tab-link {
+      font-size: 13px;
+      padding: 0px 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-container {
+    .tab-nav {
+      overflow: visible;
+      height: auto;
+    }
+
+    .tab-link {
+      font-size: 12px;
+      line-height: 44px;
+      flex: 50%;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      @include align-items(center);
+
+      &:nth-child(2n) {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .tab-container {
+    .tab-link {
+      font-size: 10px;
+    }
+  }
+}

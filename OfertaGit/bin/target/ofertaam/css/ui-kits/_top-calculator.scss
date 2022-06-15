@@ -1,0 +1,174 @@
+.bg-blue {
+  background-color: $blue;
+  //@include linear-gradient(269.13deg, #0161CD 6.41%, #0353A7 77.68%);
+}
+
+.bg {
+  background: no-repeat center;
+  background-size: cover;
+  height: 100%
+}
+
+.top-calculator {
+  height: 365px;
+  position: relative;
+
+  .sticky-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 260px;
+    background: no-repeat center bottom;
+    height: 100%;
+  }
+
+  .inner-container {
+    height: 100%
+  }
+  
+  .info-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    @include transform(translateY(-50%));
+  }
+
+  .text-box {
+    width: 42%;
+
+    p {
+      margin-bottom: 30px;
+      color: $white;
+    }
+  }
+
+  .label {
+    color: $white;
+  }
+
+  .def-button {
+    margin-top: 29px;
+    min-width: 70px;
+  }
+
+  .col {
+    margin-bottom: 15px;
+  }
+}
+
+.top-search {
+  .inner-container {
+    height: auto;
+  }
+}
+
+@media (max-width: 1280px) {
+  .top-calculator {
+    .text-box {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .top-calculator {
+    &.hyperpox-search {
+      .large {
+        width: 30%;
+      }
+
+      .middle {
+        width: 25%;
+      }
+
+      .small {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .top-calculator {
+    .info-container {
+      padding: 0  20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .top-calculator {
+    .text-box {
+      width: 80%;
+    }
+
+    &:not(.top-search) {
+      .large {
+        width: 35%;
+      }
+
+      .middle {
+        width: 25%;
+      }
+
+      .small {
+        width: 20%;
+      }
+    }
+
+    &.hyperpox-search {
+      .large {
+        width: 35%;
+      }
+
+      .middle {
+        width: 30%;
+      }
+
+      .small {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .top-calculator {
+    height: auto;
+
+    .info-container {
+      padding: 20px 0;
+      position: relative;
+      top: initial;
+      @include transform(none);
+    }
+
+    .text-box {
+      width: 100%;
+    }
+
+    .col {
+      width: 100% !important;
+      max-width: 394px;
+    }
+
+    .def-button {
+      margin-top: 10px;
+    }
+
+    &.top-search {
+     .info-container {
+       padding: 20px;
+     }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .top-calculator {
+    .sticky-bg {
+      display: none;
+    }
+  }
+}

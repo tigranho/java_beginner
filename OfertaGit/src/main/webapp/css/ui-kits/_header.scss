@@ -1,0 +1,174 @@
+header {
+  background: $white;
+  height: 60px;
+  width: 100%;
+  font-size: 12px;
+  color: $grey;
+  border-bottom: 1px solid $grey-light;
+
+  .inner-container {
+    height: 100%;
+
+    .flex {
+      height: 100%;
+    }
+  }
+
+  ul {
+    margin-left: 10px;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 28px;
+
+      a {
+        color: $grey;
+        @include transition(0.3s);
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .right {
+    @include justify-content(flex-end);
+
+    >span {
+      margin-left: 28px;
+    }
+  }
+
+
+  .i-menu {
+    &:hover {
+      cursor: pointer;
+      color: $blue;
+    }
+  }
+}
+
+
+.state {
+  max-width: 50%;
+  width: auto;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.language-box {
+  font-size: 12px;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .selected-item, li {
+    width: 40px;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .selected-item {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  .list {
+    position: absolute;
+    top: 44px;
+    z-index: 5;
+    display: none;
+    overflow: hidden;
+    background-color: $white;
+    @include border-radius(2px);
+    @include box-shadow(0 2px 4px 0 rgba(0,0,0,0.1));
+
+    ul {
+      margin-left: 0;
+    }
+
+    li {
+      color: $grey;
+      margin-left: 0;
+      @include transition(0.3s);
+
+      &:hover {
+        cursor: pointer;
+        background-color: $white-middle-dark;
+      }
+
+      &.active {
+        color: $white;
+        background-color: $green;
+
+        &:hover {
+          cursor: default;
+          color: inherit;
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  width: 170px;
+  line-height: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    border-bottom: 0;
+    height: 50px;
+  }
+}
+
+@media (max-width: 620px) {
+  header {
+    .right {
+      >span {
+        margin-left: 20px;
+      }
+    }
+  }
+  .logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 414px) {
+  header {
+    .right {
+      >span {
+        margin-left: 10px;
+      }
+    }
+  }
+  .logo {
+    width: 130px;
+  }
+
+  .compere-box {
+    margin-right: 10px;
+
+    .tooltip-container {
+      right: -20px !important;
+    }
+  }
+}

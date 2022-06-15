@@ -1,0 +1,36 @@
+@font-face {
+  font-family: notoSansRegular;
+  src: url("../fonts/noto-sans-arm/NotoSansArmenian-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: notoSansMedium;
+  src: url("../fonts/noto-sans-arm/NotoSansArmenian-Medium.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: notoSansBold;
+  src: url("../fonts/noto-sans-arm/NotoSansArmenian-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: notoSansSemiBold;
+  src: url("../fonts/noto-sans-arm/NotoSansArmenian-SemiBold.ttf") format('truetype');
+}
+
+.notoRegular {
+  font-family: notoSansRegular;
+}
+
+.notoMedium {
+  font-family: notoSansMedium;
+}
+
+.notoBold {
+  font-family: notoSansBold;
+}
+
+.notoSemiBold {
+  font-family: notoSansSemiBold;
+}
+

@@ -1,0 +1,59 @@
+.def-radio {
+  cursor: pointer;
+  font-size: 0;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+
+    &.label {
+      font-size: 14px;
+      width: 75%;
+      width: calc(100% - 30px);
+      width: -webkit-calc(100% - 30px);
+      width: -moz-calc(100% - 30px);
+
+      >span {
+        display: block;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"] + span {
+    width: 18px;
+    height: 18px;
+    padding: 4px;
+    margin-right: 10px;
+    border: 1px solid $grey-lighter;
+    background-color: transparent;
+    background-clip: content-box;
+    @include border-radius(50%);
+    @include transition(0.3s);
+  }
+
+  input[type="radio"]:checked + span {
+    background-color: $green;
+    border-color: $green;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .def-radio {
+    input[type="radio"] + span {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .def-radio {
+    input[type="radio"] + span {
+      font-size: 12px;
+    }
+  }
+}
