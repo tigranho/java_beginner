@@ -10,7 +10,7 @@ public class Add {
 
     public static void main(String[] args) {
         Stream.generate(() -> "Elsa")
-                .filter(n -> n.length() == 4)
+                
                 .limit(2)
                 .forEach(System.out::println);
 
